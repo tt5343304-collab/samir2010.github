@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Education — Zamonaviy Ta'lim Markazi</title>
+    <meta name="description" content="Ali Education — Python, Frontend, Grafik dizayn, Ingliz tili, IELTS va SMM kurslari. Tajribali mentorlar va amaliy darslar bilan kelajagingizni bugundan boshlang.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+
+    <!-- Google Fonts: Poppins (sarlavhalar uchun) va Inter (matn uchun) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome — ikonkalar uchun -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Asosiy stil fayli -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================================
+         HEADER — Logo, navigatsiya menyu va "Ro'yxatdan o'tish" tugmasi
+    ========================================================== -->
+    <header class="header" id="header">
+        <div class="container header__container">
+
+            <a href="#home" class="logo">
+                <span class="logo__icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                <span class="logo__text">Ali <strong>Education</strong></span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link">Bosh sahifa</a></li>
+                    <li><a href="#about" class="nav__link">Biz haqimizda</a></li>
+                    <li><a href="#courses" class="nav__link">Kurslar</a></li>
+                    <li><a href="#mentors" class="nav__link">Mentorlar</a></li>
+                    <li><a href="#contact" class="nav__link">Bog'lanish</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a href="#contact" class="btn btn--primary btn--sm header__cta">Ro'yxatdan o'tish</a>
+                <button class="burger" id="burger" aria-label="Menyuni ochish" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- ==========================================================
+             HERO SECTION — Katta banner, sarlavha va CTA tugmalar
+        ========================================================== -->
+        <section class="hero" id="home">
+            <div class="hero__bg-shape" aria-hidden="true"></div>
+
+            <div class="container hero__container">
+
+                <div class="hero__content">
+                    <span class="eyebrow reveal">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Zamonaviy ta'lim markazi
+                    </span>
+
+                    <h1 class="hero__title reveal">
+                        Kelajagingizni <span class="text-accent">Ali Education</span> bilan boshlang
+                    </h1>
+
+                    <p class="hero__text reveal">
+                        Zamonaviy ta'lim, tajribali mentorlar va amaliy darslar orqali o'z kelajagingizni bugundan boshlang.
+                    </p>
+
+                    <div class="hero__actions reveal">
+                        <a href="#courses" class="btn btn--primary">
+                            Kurslarni ko'rish
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn--outline">Biz bilan bog'lanish</a>
+                    </div>
+                </div>
+
+                <!-- Hero vizual qismi: "kod muharriri" uslubidagi animatsiyali oyna + suzuvchi kartochkalar -->
+                <div class="hero__visual reveal">
+                    <div class="editor-window">
+                        <div class="editor-window__bar">
+                            <span class="editor-window__dot editor-window__dot--red"></span>
+                            <span class="editor-window__dot editor-window__dot--yellow"></span>
+                            <span class="editor-window__dot editor-window__dot--green"></span>
+                            <span class="editor-window__tab">kelajak.py</span>
+                        </div>
+                        <div class="editor-window__body">
+                            <p class="editor-window__line"><span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span></p>
+                        </div>
+                    </div>
+
+                    <div class="float-badge float-badge--rating" aria-hidden="true">
+                        <i class="fa-solid fa-star"></i>
+                        <div>
+                            <strong>4.9/5</strong>
+                            <span>O'quvchilar bahosi</span>
+                        </div>
+                    </div>
+
+                    <div class="float-badge float-badge--students" aria-hidden="true">
+                        <i class="fa-solid fa-users"></i>
+                        <div>
+                            <strong>1000+</strong>
+                            <span>Bitiruvchilar</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="#about" class="scroll-indicator" aria-label="Pastga aylantirish">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- ==========================================================
+             BIZ HAQIMIZDA — Qisqacha matn va 4 ta afzallik kartochkasi
+        ========================================================== -->
+        <section class="about section" id="about">
+            <div class="container">
+
+                <div class="about__grid">
+                    <div class="about__text reveal">
+                        <span class="eyebrow">Biz haqimizda</span>
+                        <h2 class="section-title">Nega aynan Ali Education?</h2>
+                        <p class="section-text">
+                            Ali Education — zamonaviy bilim va amaliy ko'nikmalarni o'rgatishga ixtisoslashgan o'quv markazi. Bizning maqsadimiz yoshlarni kelajak kasblariga tayyorlash va ularga sifatli ta'lim berishdir.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-grid" id="featureGrid">
+                    <!-- 4 ta kartochka JavaScript orqali featuresData massividan yuklanadi (script.js) -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================================
+             KURSLAR — 6 ta kurs kartasi (JS orqali dinamik chiqariladi)
+        ========================================================== -->
+        <section class="courses section section--gray" id="courses">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <span class="eyebrow">Kurslar</span>
+                    <h2 class="section-title">Bizning kurslarimiz</h2>
+                    <p class="section-text">O'zingizga mos kursni tanlang va bugundan o'rganishni boshlang.</p>
+                </div>
+
+                <div class="course-grid" id="courseGrid">
+                    <!-- 6 ta kurs kartasi JavaScript orqali coursesData massividan yuklanadi (script.js) -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================================
+             MENTORLAR — 4 ta mentor kartasi (JS orqali dinamik chiqariladi)
+        ========================================================== -->
+        <section class="mentors section" id="mentors">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <span class="eyebrow">Mentorlar</span>
+                    <h2 class="section-title">Tajribali mentorlarimiz</h2>
+                    <p class="section-text">Sohasining professional mutaxassislari sizga bilim beradi.</p>
+                </div>
+
+                <div class="mentor-grid" id="mentorGrid">
+                    <!-- 4 ta mentor kartasi JavaScript orqali mentorsData massividan yuklanadi (script.js) -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================================
+             STATISTIKALAR — Animatsiyali hisoblagichlar
+        ========================================================== -->
+        <section class="stats" id="stats">
+            <div class="container stats__grid">
+
+                <div class="stat-item reveal">
+                    <span class="stat-item__number" data-target="1000">0</span><span class="stat-item__suffix">+</span>
+                    <span class="stat-item__label">O'quvchi</span>
+                </div>
+
+                <div class="stat-item reveal">
+                    <span class="stat-item__number" data-target="20">0</span><span class="stat-item__suffix">+</span>
+                    <span class="stat-item__label">Mentor</span>
+                </div>
+
+                <div class="stat-item reveal">
+                    <span class="stat-item__number" data-target="15">0</span><span class="stat-item__suffix">+</span>
+                    <span class="stat-item__label">Kurs</span>
+                </div>
+
+                <div class="stat-item reveal">
+                    <span class="stat-item__number" data-target="95">0</span><span class="stat-item__suffix">%</span>
+                    <span class="stat-item__label">Mamnun o'quvchilar</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================================
+             O'QUVCHILAR FIKRLARI — 3 ta testimonial (JS orqali dinamik)
+        ========================================================== -->
+        <section class="testimonials section" id="testimonials">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <span class="eyebrow">Fikrlar</span>
+                    <h2 class="section-title">O'quvchilarimiz fikri</h2>
+                    <p class="section-text">Bizning o'quvchilarimiz tajribasi haqida ular o'zlari so'zlab bersin.</p>
+                </div>
+
+                <div class="testimonial-grid" id="testimonialGrid">
+                    <!-- 3 ta testimonial kartasi JavaScript orqali testimonialsData massividan yuklanadi (script.js) -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================================
+             BOG'LANISH — Kontakt ma'lumotlari va forma
+        ========================================================== -->
+        <section class="contact section section--gray" id="contact">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <span class="eyebrow">Bog'lanish</span>
+                    <h2 class="section-title">Biz bilan bog'laning</h2>
+                    <p class="section-text">Savollaringiz bo'lsa, murojaat qiling — sizga yordam berishdan mamnunmiz.</p>
+                </div>
+
+                <div class="contact__grid">
+
+                    <!-- Chap tomon: kontakt ma'lumotlari -->
+                    <div class="contact__info reveal">
+
+                        <div class="contact-card">
+                            <span class="contact-card__icon"><i class="fa-solid fa-phone"></i></span>
+                            <div>
+                                <span class="contact-card__label">Telefon</span>
+                                <a href="tel:+998901234567" class="contact-card__value">+998 90 123 45 67</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <span class="contact-card__icon"><i class="fa-solid fa-envelope"></i></span>
+                            <div>
+                                <span class="contact-card__label">Email</span>
+                                <a href="mailto:info@alieducation.uz" class="contact-card__value">info@alieducation.uz</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <span class="contact-card__icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <div>
+                                <span class="contact-card__label">Manzil</span>
+                                <span class="contact-card__value">Toshkent sh., Chilonzor tumani</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <span class="contact-card__icon"><i class="fa-brands fa-telegram"></i></span>
+                            <div>
+                                <span class="contact-card__label">Telegram</span>
+                                <a href="https://t.me/ali_education" target="_blank" rel="noopener" class="contact-card__value">@ali_education</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- O'ng tomon: bog'lanish formasi -->
+                    <form class="contact__form reveal" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Ism</label>
+                            <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+998 __ ___ __ __" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Xabar</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Xabaringizni yozing..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                            <span class="btn__text">Yuborish</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+
+                        <p class="form-success" id="formSuccess">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Xabaringiz uchun rahmat! Tez orada siz bilan bog'lanamiz.
+                        </p>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================
+         FOOTER — Logo, menyu, ijtimoiy tarmoqlar va copyright
+    ========================================================== -->
+    <footer class="footer">
+        <div class="container footer__grid">
+
+            <div class="footer__col footer__col--brand">
+                <a href="#home" class="logo logo--footer">
+                    <span class="logo__icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <span class="logo__text">Ali <strong>Education</strong></span>
+                </a>
+                <p class="footer__text">
+                    Zamonaviy bilim va amaliy ko'nikmalar orqali kelajak kasblariga tayyorlaydigan o'quv markazi.
+                </p>
+                <div class="footer__socials">
+                    <a href="https://t.me/ali_education" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://instagram.com/ali_education" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com/ali_education" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <h3 class="footer__heading">Menyu</h3>
+                <ul class="footer__links">
+                    <li><a href="#home">Bosh sahifa</a></li>
+                    <li><a href="#about">Biz haqimizda</a></li>
+                    <li><a href="#courses">Kurslar</a></li>
+                    <li><a href="#mentors">Mentorlar</a></li>
+                    <li><a href="#contact">Bog'lanish</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h3 class="footer__heading">Aloqa</h3>
+                <ul class="footer__links">
+                    <li><a href="tel:+998901234567"><i class="fa-solid fa-phone"></i> +998 90 123 45 67</a></li>
+                    <li><a href="mailto:info@alieducation.uz"><i class="fa-solid fa-envelope"></i> info@alieducation.uz</a></li>
+                    <li><span><i class="fa-solid fa-location-dot"></i> Toshkent sh., Chilonzor tumani</span></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; <span id="year"></span> Ali Education. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================
+         MODAL — Kurs haqida batafsil ma'lumot (JS orqali to'ldiriladi)
+    ========================================================== -->
+    <div class="modal-overlay" id="courseModal">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal__close" id="modalClose" aria-label="Yopish">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal__content" id="modalContent">
+                <!-- Kurs tafsilotlari script.js orqali shu yerga chiqariladi -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Asosiy JavaScript fayli -->
+    <script src="script.js"></script>
+</body>
+</html>
